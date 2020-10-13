@@ -1,0 +1,7 @@
+{
+  "name": "WebDristi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
