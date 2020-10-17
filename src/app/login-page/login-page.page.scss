@@ -1,44 +1,67 @@
-.btn-reg {
+
+.divider {
+    display: flex;
+    
+    &:before,
+    &:after {
+      content: "";
+      flex: 1;
+    }
+}
+  
+.line {
+    align-items: center;
+    margin: 1em -1em;
     width:325px;
-    position:absolute;
-    left:40px;
-    bottom:350px;
+    color: #cccccc;
+    
+    &:before,
+    &:after {
+      height: 1px;
+      margin: 0 1em;
+    }
+} 
+
+.one-line {
+    &:before,
+    &:after {
+       background: #cccccc;
+    }
 }
 
-.btn-sign{
-    width:325px;
-    position:absolute;
-    bottom:225px;
-    left:40px;
+.already {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
-h5{
-    font-weight:bold;
+.inp-email,.inp-pass{
+    width:300px;
 }
 
-.text-login{
-    position:absolute;
-    bottom:270px;
-    left:135px;
+
+.login-title{
+    margin-top:125px;
     
 }
 
-.line-login-one{
-    position:absolute;
-    bottom:315px;
-    left:45px;
-    color:gray;
+.btn-regis,.btn-sigin{
+       width:300px;
+       
 }
-.or-login{
-    position:absolute;
-    bottom:310px;
-    left:200px;
-    color:gray;
 
+.img-login{
+    display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 30%;
 }
-.line-login-two{
-    position:absolute;
-    bottom:315px;
-    left:230px;
-    color:gray;
+
+.img-title{
+    display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 25%;
 }
+
+
