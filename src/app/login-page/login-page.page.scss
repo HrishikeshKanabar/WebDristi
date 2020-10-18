@@ -54,14 +54,28 @@
     display: block;
  margin-left: auto;
  margin-right: auto;
- width: 30%;
+ width: 25%;
 }
 
 .img-title{
     display: block;
  margin-left: auto;
  margin-right: auto;
- width: 25%;
+ width: 20%;
 }
 
 
+.auth-form{
+    .fixed-content,
+    .scroll-content {
+        display: flex;
+        align-items: center;
+    }
+
+    ion-list {
+        max-width: 305px; 
+        width:100%; 
+        margin: auto; 
+        text-align: center;
+    }
+}

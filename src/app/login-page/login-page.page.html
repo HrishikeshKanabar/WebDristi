@@ -1,30 +1,28 @@
 <div class="login-title">
   
   <div class="img-login"> 
-    <center><img src="../assets/img/Logotrans.png"></center>
+    <img src="../assets/img/Logotrans.png">
   </div>
   <div class="img-title"> 
-    <center><img src="../assets/img/titletrans.png"></center>
+    <img src="../assets/img/titletrans.png">
   </div>  
 </div>
 
-<ion-content class="auth-form">
-  
-  <ion-grid>
-    <ion-row >
-      <ion-col align-self-center>
+<ion-content padding  class="auth-form">
+
+
+    <ion-list>
+   
        
-          <center><ion-button shape="round" class="btn-regis" [routerLink]="['/registration']" expand="block" color="primary">Sign Up</ion-button></center>
+          <ion-button shape="round" class="btn-regis" [routerLink]="['/register-page']" expand="block" color="primary">Sign Up</ion-button>
       
-          <center>  <span class="divider line one-line">or</span></center>
+          <span class="divider line one-line">or</span>
 
             <span class="already">Already a user?</span>
 
-          <center> <ion-button shape="round" class="btn-sigin" [routerLink]="['/login']" expand="block" color="danger">Log In</ion-button></center>
+          <ion-button shape="round" class="btn-sigin" [routerLink]="['/signin-page']" expand="block" color="danger">Log In</ion-button>
 
-      
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  </ion-list>
+
 
 </ion-content>

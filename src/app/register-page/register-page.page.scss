@@ -1,0 +1,31 @@
+.regis-title{
+    margin-top:125px;
+    .fixed-content,
+    .scroll-content {
+        display: flex;
+        align-items: center;
+    }
+    ion-list {
+        max-width: 375px; 
+        width:100%; 
+        margin: auto; 
+        text-align: center;
+    }
+}
+
+
+.register-fileds{
+     
+    .fixed-content,
+    .scroll-content {
+        display: flex;
+        align-items: center;
+    }
+    ion-list {
+        max-width: 300px; 
+        width:100%; 
+        margin: auto; 
+        text-align: center;
+    }
+    
+}
