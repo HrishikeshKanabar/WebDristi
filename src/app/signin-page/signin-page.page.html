@@ -3,12 +3,24 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Log In</ion-title>
+    <ion-text>Log In</ion-text>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <div class="full-component">
+
+  <div class="sigin-title">
+    <ion-list>
+    <ion-item lines="none">
+    <ion-title >Enter Credentials Here</ion-title>
+    </ion-item>
+    </ion-list>
+  </div>
+
   <form>
+   <ion-list>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
       <ion-input type="text" required></ion-input>
@@ -19,11 +31,12 @@
       <ion-input type="password" required></ion-input>
     </ion-item>
 
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
+        <br>
+        <ion-button type="submit" color="danger" expand="block">Log In</ion-button>
+        <br>
         <a [routerLink]="['/forgotpassword-page']" class="small-text">Forgot Password?</a>
-      </ion-col>
-    </ion-row>
+  </ion-list>
+     
   </form>
+</div>
 </ion-content>
