@@ -32,26 +32,32 @@
                   <ion-list>
                   <ion-item lines="full">
                     <ion-label position="floating">First name</ion-label>
-                    <ion-input type="text" required></ion-input>
+                    <ion-input type="text" #fn required ></ion-input>
                   </ion-item>
 
                   <ion-item lines="full">
                     <ion-label position="floating">Last name</ion-label>
-                    <ion-input type="text" required></ion-input>
+                    <ion-input type="text" #ln required></ion-input>
                   </ion-item>
 
                   <ion-item lines="full">
                     <ion-label position="floating">Email</ion-label>
-                    <ion-input type="text" required></ion-input>
+                    <ion-input type="text" #email required></ion-input>
                   </ion-item>
 
                   <ion-item lines="full">
                     <ion-label position="floating">Password</ion-label>
-                    <ion-input type="password" required></ion-input>
+                    <ion-input type="password" #pass required></ion-input>
                   </ion-item>
 
-                  
-                  <ion-button type="submit" color="danger" expand="block">Sign Up</ion-button>
+                  <ion-item lines="full">
+                    <ion-label position="floating">Confirm password</ion-label>
+                    <ion-input type="password" #confPass required></ion-input>
+                  </ion-item>
+
+
+                  <br>
+                  <ion-button type="submit" (click)="signUp(fn,ln,email,pass,confPass)" color="danger" expand="block">Sign Up</ion-button>
                 </ion-list>   
                 </form>
               </div>
