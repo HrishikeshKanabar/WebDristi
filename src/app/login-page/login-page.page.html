@@ -1,3 +1,28 @@
-<ion-toolbar>
-  <ion-title size="large">Web Dristi</ion-title>
-</ion-toolbar>
+<div class="login-title">
+  
+  <div class="img-login"> 
+    <img src="../assets/img/Logotrans.png">
+  </div>
+  <div class="img-title"> 
+    <img src="../assets/img/titletrans.png">
+  </div>  
+</div>
+
+<ion-content padding  class="auth-form">
+
+
+    <ion-list>
+   
+       
+          <ion-button shape="round" class="btn-regis" [routerLink]="['/register-page']" expand="block" color="primary">Sign Up</ion-button>
+      
+          <span class="divider line one-line">or</span>
+
+            <span class="already">Already a user?</span>
+
+          <ion-button shape="round" class="btn-sigin" [routerLink]="['/signin-page']" expand="block" color="danger">Log In</ion-button>
+
+  </ion-list>
+
+
+</ion-content>

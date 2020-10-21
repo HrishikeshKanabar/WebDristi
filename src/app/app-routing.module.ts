@@ -8,11 +8,26 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    //redirectTo: 'home',  
+    // previously was home we changed to our app log in  page
+    redirectTo: 'login-page', 
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'login-page',
     loadChildren: () => import('./login-page/login-page.module').then( m => m.LoginPagePageModule)
+  },
+  {
+    path: 'register-page',
+    loadChildren: () => import('./register-page/register-page.module').then( m => m.RegisterPagePageModule)
+  },
+  {
+    path: 'signin-page',
+    loadChildren: () => import('./signin-page/signin-page.module').then( m => m.SigninPagePageModule)
+  },
+  {
+    path: 'forgotpassword-page',
+    loadChildren: () => import('./forgotpassword-page/forgotpassword-page.module').then( m => m.ForgotpasswordPagePageModule)
   },
 
 ];

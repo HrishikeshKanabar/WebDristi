@@ -1,0 +1,81 @@
+
+.divider {
+    display: flex;
+    
+    &:before,
+    &:after {
+      content: "";
+      flex: 1;
+    }
+}
+  
+.line {
+    align-items: center;
+    margin: 1em -1em;
+    width:325px;
+    color: #cccccc;
+    
+    &:before,
+    &:after {
+      height: 1px;
+      margin: 0 1em;
+    }
+} 
+
+.one-line {
+    &:before,
+    &:after {
+       background: #cccccc;
+    }
+}
+
+.already {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.inp-email,.inp-pass{
+    width:300px;
+}
+
+
+.login-title{
+    margin-top:125px;
+    
+}
+
+.btn-regis,.btn-sigin{
+       width:300px;
+       
+}
+
+.img-login{
+    display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 25%;
+}
+
+.img-title{
+    display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 20%;
+}
+
+
+.auth-form{
+    .fixed-content,
+    .scroll-content {
+        display: flex;
+        align-items: center;
+    }
+
+    ion-list {
+        max-width: 305px; 
+        width:100%; 
+        margin: auto; 
+        text-align: center;
+    }
+}

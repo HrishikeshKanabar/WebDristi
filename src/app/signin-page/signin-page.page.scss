@@ -1,0 +1,31 @@
+ion-title{
+    text-align: center;
+}
+
+.full-component{
+    
+    border: 1px solid #488aff;
+    margin-left: 550px;
+    margin-right: 550px;
+    margin-top:125px;
+    .fixed-content,
+    .scroll-content {
+        display: flex;
+        align-items: center;
+    }
+    ion-list {
+        max-width: 300px; 
+        width:100%; 
+        margin: auto; 
+        text-align: center;
+    }  
+   
+}
+
+
+@media (min-width: 240px) and (max-width: 1024px) {
+    .full-component{
+        border:none;
+        margin:0px;
+    }  
+}
