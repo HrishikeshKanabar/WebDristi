@@ -88,7 +88,8 @@ export class AuthenticationService {
     })
   }
 
-  // Store user in localStorage
+  // Store user in localStorage 
+  // Using user interface here
   SetUserData(user) {
     const userRef: AngularFirestoreDocument<any> = this.afStore.doc(`users/${user.uid}`);
     const userData: User = {
@@ -96,8 +97,11 @@ export class AuthenticationService {
         firstName:user.firstName,
         lastName: user.lastName,
         password:user.password,
-        confirmpassword:user.confirmpassword,
-        emailVerified:user.emailVerified
+        confirmPassword:user.confirmPassword,
+        emailVerified:user.emailVerified,
+        created:user.created,
+        lastModified:user.lastModified,
+        email:user.email
 
     }
     return userRef.set(userData, {
@@ -115,16 +119,15 @@ export class AuthenticationService {
 
 // 
 
-register(firstName,lastName,password,confirmPassword,emailVerified){
+register(firstName,lastName,emailVerified,email){
   
   return new Promise<any>((resolve, reject) => {
     this.afStore.collection('/users').add({
       
       firstName:firstName.value,
       lastName:lastName.value,
-      password:password.value,
-      confirmPassword:confirmPassword.value,
-      emailVerified:JSON.stringify(Boolean(emailVerified.value)),  
+      emailVerified:Boolean(emailVerified.value),
+      email:email.value, 
     })
     .then(
       (res) => {

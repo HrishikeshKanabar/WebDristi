@@ -3,6 +3,10 @@ export interface User {
     firstName:string;
     lastName: string;
     password:string;
-    confirmpassword:string;
+    confirmPassword:string;
     emailVerified: boolean;
+    email:string;
+    created:Date;
+    lastModified:Date;
+
  }

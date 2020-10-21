@@ -15,18 +15,32 @@ export class RegisterPagePage implements OnInit {
   }
 
   signUp(fn,ln,email,pass,confPass){
-    /*this.authService.RegisterUser(email.value,pass.value)      
+
+
+
+    // Data from here goes to authentication
+    
+    this.authService.RegisterUser(email.value,pass.value)      
     .then((res) => {
-      // Do something here
+      console.log('USER REGISTRATION DONE WITH AUTH');
+
+
+    // Data from here goes to user collection of cloud fire store
+    // if Auth is sucessful then only allow to store user details
+
+      this.authService.register(fn,ln,false,email)
+      .then( res => {
+        console.log('USER DETAILS SAVED IN COLLECTION: '+
+        'First Name:'+fn.value+
+        'Last Name:'+ln.value+
+        'Email:'+email.value
+        );
+      }, err => {
+        console.log(err)
+      })
+      
     }).catch((error) => {
       window.alert(error.message)
-    })*/
-
-    this.authService.register(fn,ln,email,pass,confPass)
-    .then( res => {
-      console.log(res)
-    }, err => {
-      console.log(err)
     })
 
 
