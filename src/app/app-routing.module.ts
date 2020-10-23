@@ -28,7 +28,15 @@ const routes: Routes = [
   {
     path: 'forgotpassword-page',
     loadChildren: () => import('./forgotpassword-page/forgotpassword-page.module').then( m => m.ForgotpasswordPagePageModule)
+  },  {
+    path: 'verifyemail-page',
+    loadChildren: () => import('./verifyemail-page/verifyemail-page.module').then( m => m.VerifyemailPagePageModule)
   },
+  {
+    path: 'dashboard-page',
+    loadChildren: () => import('./dashboard-page/dashboard-page.module').then( m => m.DashboardPagePageModule)
+  },
+
 
 ];
 

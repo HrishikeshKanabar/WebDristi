@@ -21,16 +21,16 @@ export class RegisterPagePage implements OnInit {
 
     
     if(pass.value!==confPass.value && pass.value.length>=6 && confPass.value.length>=6 ){
-      console.log(1);
+      //console.log(1);
 
       this.presentAlert("Password do not match !");
     
     }else if(confPass.value.length<6 || pass.value.length<6){
-      console.log(2);
+      //console.log(2);
       this.presentAlert("Password should be atleast 6 characters");
     }else{
 
-      console.log(3);
+      //console.log(3);
        // Data from here goes to authentication
           this.authService.RegisterUser(email.value,pass.value)      
         .then((res) => {
@@ -50,6 +50,9 @@ export class RegisterPagePage implements OnInit {
           }, err => {
             console.log(err)
           })
+
+          this.authService.SendVerificationMail()
+          this.router.navigate(['verifyemail-page']);
           
         }).catch((error) => {
           //window.alert(error.message)

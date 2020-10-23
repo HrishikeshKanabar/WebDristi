@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { AuthenticationService } from "../shared/authentication-service";
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-signin-page',
@@ -11,7 +12,7 @@ export class SigninPagePage implements OnInit {
 
   constructor(
     public authService: AuthenticationService,
-    public router: Router) {}
+    public router: Router,private alertCtrl: AlertController) {}
 
   ngOnInit() {
   }
@@ -22,16 +23,31 @@ export class SigninPagePage implements OnInit {
     this.authService.SignIn(email.value, pass.value)
       .then((res) => {
 
-        console.log("LOGIN SUCESSFUL");
-        /*if(this.authService.isEmailVerified) {
-          this.router.navigate(['dashboard']);          
+        
+        if(this.authService.isEmailVerified) {
+          console.log("LOGIN SUCESSFUL");
+          this.router.navigate(['dashboard-page']);          
         } else {
-          window.alert('Email is not verified')
+          //window.alert('Email is not verified')
+          this.presentAlert('Email is not verified');
           return false;
-        }*/
+        }
       }).catch((error) => {
-        window.alert(error.message)
+        //window.alert(error.message)
+        this.presentAlert(error.message);
       })
 
+  }
+
+
+  async presentAlert(errorMessage) {
+    const alert = await this.alertCtrl.create({
+      cssClass: 'my-custom-class',
+      header: 'Warning',
+      message: errorMessage,
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 }

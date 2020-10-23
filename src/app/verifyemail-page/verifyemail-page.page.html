@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Email Verification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="full-component">
+
+    <div class="sigin-title">
+      <ion-list>
+      <ion-item lines="none">
+      <ion-title >
+        <h2>Verify Email</h2>
+        <p>
+          Please check your email
+          <br/>
+          and
+          <br/>
+          click link to verify it
+        <br/>
+        </p>
+      </ion-title>
+      </ion-item>
+      </ion-list>
+    </div>
+  
+    <form>
+      <ion-list>   
+      
+      <ion-button type="submit"  color="danger" expand="block" (click)="authService.SendVerificationMail()">
+        Resend Verification Email
+      </ion-button>
+    </ion-list>
+     </form>
+     
+    
+</div>
+</ion-content>
