@@ -5,6 +5,7 @@ import { Router } from "@angular/router";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +17,8 @@ export class AuthenticationService {
     public afStore: AngularFirestore,
     public ngFireAuth: AngularFireAuth,
     public router: Router,  
-    public ngZone: NgZone 
+    public ngZone: NgZone
+    
   ) {
     this.ngFireAuth.authState.subscribe(user => {
       if (user) {
@@ -44,7 +46,7 @@ export class AuthenticationService {
   SendVerificationMail() {
     return this.ngFireAuth.currentUser.then(u => u.sendEmailVerification())
     .then(() => {
-      this.router.navigate(['verify-email']);
+      this.router.navigate(['verifyemail-page']);
     })
   }
 
@@ -52,7 +54,7 @@ export class AuthenticationService {
   PasswordRecover(passwordResetEmail) {
     return this.ngFireAuth.sendPasswordResetEmail(passwordResetEmail)
     .then(() => {
-      window.alert('Password reset email has been sent, please check your inbox.');
+      //window.alert('Password reset email has been sent, please check your inbox.');
     }).catch((error) => {
       window.alert(error)
     })
@@ -80,11 +82,12 @@ export class AuthenticationService {
     return this.ngFireAuth.signInWithPopup(provider)
     .then((result) => {
        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['dashboard-page']);
         })
       this.SetUserData(result.user);
     }).catch((error) => {
       window.alert(error)
+      
     })
   }
 
