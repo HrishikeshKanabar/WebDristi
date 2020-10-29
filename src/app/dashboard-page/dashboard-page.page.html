@@ -1,9 +1,87 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Welcome</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content>
+  <div class="full-component">
+  <ion-list>
+   
+      <ion-avatar class="ion-margin-start">
+        <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
+      </ion-avatar>
+       
+      <h4>Welcome</h4>
+      <h4>XX</h4>
+
+      <ion-grid>
+         <ion-row>
+            <ion-col col-6>
+                <ion-card text-center  color="danger">
+                  <ion-icon name="add-circle"></ion-icon>
+                  <h6>Create Room</h6>
+                </ion-card>
+            </ion-col>
+            <ion-col col-6>
+                <ion-card text-center color="danger">
+                  <ion-icon name="person-add"></ion-icon>
+                  <h6>Join Room</h6>
+                </ion-card>
+            </ion-col>
+           </ion-row>
+
+           <ion-row>
+              <ion-col col-6>
+                <ion-card text-center  color="danger">
+                  <ion-icon name="calendar"></ion-icon>
+                  <h6>Schedule</h6>
+                </ion-card>
+            </ion-col>
+            <ion-col col-6>
+              <ion-card text-center  color="danger">
+                <ion-icon name="settings" ></ion-icon>
+                <h6>Settings</h6>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6>
+              <ion-card text-center  color="danger">
+                <ion-icon name="share"></ion-icon>
+                <h6>Share Screen</h6>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+
+  </ion-list>
+ </div>
 
 </ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule">
+      <ion-icon name="add-circle"></ion-icon>
+      <ion-label>Create Room</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="speakers">
+      <ion-icon name="person-add"></ion-icon>
+      <ion-label>Join Room</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon name="settings"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
