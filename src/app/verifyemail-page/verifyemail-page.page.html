@@ -1,7 +1,6 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Email Verification</ion-title>
   </ion-toolbar>
@@ -34,6 +33,10 @@
       
       <ion-button type="submit"  color="danger" expand="block" (click)="authService.SendVerificationMail()">
         Resend Verification Email
+      </ion-button>
+      <br/>
+      <ion-button type="submit"  color="tertiary" expand="block" [routerLink]="['/signin-page']">
+         Go to Login page
       </ion-button>
     </ion-list>
      </form>
