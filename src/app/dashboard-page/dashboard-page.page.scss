@@ -1,0 +1,33 @@
+.ion-margin-start  {     
+    width:100% !important;  
+    height : 100% !important;  
+    max-width: 95px !important;  //any size
+    max-height: 95px !important; //any size 
+    margin: auto;
+    align-items: center;
+}
+
+.dash-icon{
+    font-size: 40px;
+    padding:0px;
+    margin:0px;
+    position: relative;
+    top:12px;
+}
+
+
+
+.full-component{
+    margin: auto;
+    .fixed-content,
+    .scroll-content {
+        display: flex;
+        align-items: center;
+    }
+    ion-list {
+        max-width: 300px; 
+        width:100%; 
+        margin: auto; 
+        text-align: center;
+    } 
+}
