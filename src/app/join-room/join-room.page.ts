@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { AuthenticationService } from "../shared/authentication-service";
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-join-room',
@@ -7,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinRoomPage implements OnInit {
 
-  constructor() { }
+  constructor( public authService: AuthenticationService,
+    public router: Router,private alertCtrl: AlertController) { }
 
   ngOnInit() {
   }
