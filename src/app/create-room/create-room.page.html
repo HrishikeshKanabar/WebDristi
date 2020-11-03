@@ -1,9 +1,33 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
     <ion-title>Create Room</ion-title>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="full-component">
+  <div class="create-room-title"></div>
+  <ion-item lines="none">
+    <ion-title >Create Room ID here</ion-title>
+  </ion-item>
+  <form>
+    <ion-list>
+     <ion-item lines="full">
+       <ion-label position="floating">Room ID</ion-label>
+       <ion-input type="text" required #room_id></ion-input>
+     </ion-item>
+     <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" required #name></ion-input>
+    </ion-item>
+       <br>
+       <ion-button type="submit" color="tertiary" expand="block" >Create</ion-button>
+       <br>
+   </ion-list>
+  </form>
+  </div>
 </ion-content>
+ 
