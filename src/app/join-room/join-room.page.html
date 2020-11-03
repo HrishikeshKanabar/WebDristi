@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-text>Join Room</ion-text>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<div class="full-component">
+
+ <div class="join-room-title">
+   <ion-list>
+    <ion-item lines="none">
+    <ion-title >Enter Room ID here</ion-title>
+    </ion-item>
+  </ion-list>
+  </div>
+
+    <form>
+      <ion-list>
+       <ion-item lines="full">
+         <ion-label position="floating">Room ID</ion-label>
+         <ion-input type="text" required #room id></ion-input>
+       </ion-item>
+         <br>
+         <ion-button type="submit" color="tertiary" expand="block" >Join</ion-button>
+         <br>
+     </ion-list>
+    </form>
+  </div>
+</ion-content>
