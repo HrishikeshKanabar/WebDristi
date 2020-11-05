@@ -8,6 +8,8 @@ import { DashboardPagePageRoutingModule } from './dashboard-page-routing.module'
 
 import { DashboardPagePage } from './dashboard-page.page';
 
+import {DashboardCardsPage} from '../dashboard-cards/dashboard-cards.page';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { DashboardPagePage } from './dashboard-page.page';
     IonicModule,
     DashboardPagePageRoutingModule
   ],
-  declarations: [DashboardPagePage]
+  declarations: [DashboardPagePage,DashboardCardsPage]
 })
 export class DashboardPagePageModule {}

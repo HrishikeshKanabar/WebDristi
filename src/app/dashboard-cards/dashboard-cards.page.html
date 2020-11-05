@@ -1,0 +1,48 @@
+ <div class="full-component">
+  <ion-list>
+      <ion-avatar class="ion-margin-start">
+        <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
+      </ion-avatar>
+      <h4>Welcome</h4>
+      <h4>{{name}}</h4>
+      <ion-grid>
+         <ion-row>
+            <ion-col col-6>
+                <ion-card text-center  color="tertiary" [routerLink]="['/create-room']">
+                  <ion-icon class="dash-icon" name="add-circle"></ion-icon>
+                  <h6>Create Room</h6>
+                </ion-card>
+            </ion-col>
+            <ion-col col-6>
+                <ion-card text-center color="tertiary" [routerLink]="['/join-room']">
+                  <ion-icon class="dash-icon" name="person-add"></ion-icon>
+                  <h6>Join Room</h6>
+                </ion-card>
+            </ion-col>
+           </ion-row>
+           <ion-row>
+              <ion-col col-6>
+                <ion-card text-center  color="danger">
+                  <ion-icon class="dash-icon" name="calendar"></ion-icon>
+                  <h6>Schedule</h6>
+                </ion-card>
+            </ion-col>
+            <ion-col col-6>
+              <ion-card text-center  color="danger">
+                <ion-icon  class="dash-icon"name="settings" ></ion-icon>
+                <h6>Settings</h6>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6>
+              <ion-card text-center  color="tertiary">
+                <ion-icon  class="dash-icon" name="share"></ion-icon>
+                <h6>Share Screen</h6>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+  </ion-list>
+ </div>
+

@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Router } from "@angular/router";
 import { AuthenticationService } from "../shared/authentication-service";
 import { AlertController } from '@ionic/angular';
+import { AngularFireAuth } from "@angular/fire/auth";
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-signin-page',
@@ -10,9 +12,13 @@ import { AlertController } from '@ionic/angular';
 })
 export class SigninPagePage implements OnInit {
 
+@Input() userData:Boolean;
+
   constructor(
     public authService: AuthenticationService,
-    public router: Router,private alertCtrl: AlertController) {}
+    public router: Router,private alertCtrl: AlertController,
+    public afStore: AngularFirestore,
+    public ngFireAuth: AngularFireAuth) {}
 
   ngOnInit() {
   }
@@ -23,15 +29,28 @@ export class SigninPagePage implements OnInit {
     this.authService.SignIn(email.value, pass.value)
       .then((res) => {
 
+
+        // to check email verified or not
+
         
-        if(this.authService.isEmailVerified) {
-          console.log("LOGIN SUCESSFUL");
-          this.router.navigate(['dashboard-page']);          
-        } else {
-          //window.alert('Email is not verified')
-          this.presentAlert('Email is not verified');
-          return false;
-        }
+        this.ngFireAuth.authState.subscribe(user => {
+          if (user) {
+            this.userData = user.emailVerified
+            
+            //console.log("Email verified inside ?:"+this.userData);
+
+            if(this.userData) {
+              //console.log("LOGIN SUCESSFUL");
+              this.router.navigate(['dashboard-page']);          
+            } else {
+              //window.alert('Email is not verified')
+              this.presentAlert('Email is not verified');
+              return false;
+            }
+
+          } 
+        })
+      
       }).catch((error) => {
         //window.alert(error.message)
         this.presentAlert(error.message);

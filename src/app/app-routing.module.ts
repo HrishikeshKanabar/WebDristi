@@ -44,6 +44,10 @@ const routes: Routes = [
     path: 'join-room',
     loadChildren: () => import('./join-room/join-room.module').then( m => m.JoinRoomPageModule)
   },
+  {
+    path: 'dashboard-cards',
+    loadChildren: () => import('./dashboard-cards/dashboard-cards.module').then( m => m.DashboardCardsPageModule)
+  },
 
 
 ];
