@@ -2,7 +2,6 @@ import { Component, OnInit,Input } from '@angular/core';
 import { AuthenticationService } from "../shared/authentication-service";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireAuth } from "@angular/fire/auth";
-import SimpleWebRTC from 'simplewebrtc'
 
 
 @Component({
@@ -38,24 +37,12 @@ export class DashboardPagePage implements OnInit {
           //console.log(posts);
           this.name= posts[0].fisrtName+" "+posts[0].lastName
           
-         });
-
-
-           
-        
+         }); 
           
       }
       
 Signout(){
-
     this.authService.SignOut()
-     
-
   }
 
-
-  routeToCreateRoom(){
-
-    console.log("CARD CLICK WORKS !!!");
-  }
 }

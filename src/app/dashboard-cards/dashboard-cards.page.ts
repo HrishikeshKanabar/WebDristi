@@ -2,7 +2,7 @@ import { Component, OnInit,Input} from '@angular/core';
 import { AuthenticationService } from "../shared/authentication-service";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireAuth } from "@angular/fire/auth";
-import SimpleWebRTC from 'simplewebrtc'
+
 
 
 
@@ -17,7 +17,8 @@ import SimpleWebRTC from 'simplewebrtc'
 export class DashboardCardsPage implements OnInit {
 
   constructor(public afStore: AngularFirestore,
-    public ngFireAuth: AngularFireAuth,) { }
+    public ngFireAuth: AngularFireAuth,
+    ) { }
   
     @Input()  name:string;
 

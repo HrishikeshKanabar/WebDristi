@@ -48,6 +48,10 @@ const routes: Routes = [
     path: 'dashboard-cards',
     loadChildren: () => import('./dashboard-cards/dashboard-cards.module').then( m => m.DashboardCardsPageModule)
   },
+  {
+    path: 'meeting-page',
+    loadChildren: () => import('./meeting-page/meeting-page.module').then( m => m.MeetingPagePageModule)
+  },
 
 
 ];
